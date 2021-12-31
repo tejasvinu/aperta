@@ -1,0 +1,19 @@
+.profile {
+  min-height: 85vh;
+  padding: 100px;
+  float: left;
+  width: 300px;
+  p {
+    width: auto;
+    font-size: larger;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  img {
+    width: 200px;
+  }
+}
+.down-arrow {
+  position: fixed;
+  bottom: 0ch;
+  justify-content: center;
+}
