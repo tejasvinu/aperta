@@ -6,6 +6,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Sign from './components/sign';
 import Profile from './components/profile';
+import Navbar from './components/navbar';
 //import jquery
 import $ from 'jquery';
 
@@ -42,6 +43,8 @@ $(document).on("click", 'a[href^="#"]', function (e) {
 
 function App() {
   return (
+  <>
+  <header><Navbar/></header>
   <div className="App">
     <section class="page" id="page1">
       <Profile/>
@@ -56,6 +59,7 @@ function App() {
       <li><a href="#page2"></a></li>
     </ul>
   </div>
+  </>
   );
 }
 

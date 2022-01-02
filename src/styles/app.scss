@@ -3,11 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(-100vh);
   scroll-snap-type: y mandatory;
 }
-$base-color: #fd82d8;
+$base-color: #71b2ee;
 $degrees: 5deg;
 
 .App {
@@ -20,7 +19,7 @@ $degrees: 5deg;
     text-align: center;
     position: relative;
 
-    @for $i from 1 to 3 {
+    @for $i from 1 to 10 {
       &:nth-child(#{$i}) {
         background-color: lighten($base-color, $degrees * $i);
       }
@@ -81,13 +80,22 @@ body {
   }
 }
 
+#page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 #page2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 %active-dot {
   transform: scale(2);
 }
 
+@import "./navbar";
 @import "./footer";
 @import "./header";
 @import "./profile";
