@@ -44,8 +44,8 @@ $(document).on("click", 'a[href^="#"]', function (e) {
 function App() {
   return (
   <>
-  <header><Navbar/></header>
   <div className="App">
+    <header><Navbar/></header>    
     <section class="page" id="page1">
       <Profile/>
     </section>

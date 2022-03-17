@@ -1,0 +1,24 @@
+* {
+  margin: auto;
+  height: auto;
+}
+
+.tweet-div {
+  padding-top: 10px;
+  padding-bottom: 3px;
+}
+.tweet {
+  background: lightblue;
+  display: block;
+  margin: 0 auto;
+  height: max-content;
+  max-width: 10px;
+  border: 1px solid rgb(44, 148, 245);
+  border-radius: 5px;
+  word-wrap: break-word;
+}
+
+button {
+  position: sticky;
+  padding-top: 3px;
+}

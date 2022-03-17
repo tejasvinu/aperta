@@ -1,0 +1,21 @@
+.Login {
+  padding: 60px 0;
+}
+.formemail {
+  padding: 10px;
+}
+
+.formpass {
+  padding: 10px;
+}
+
+.submit_but {
+  padding: 10px 0 10px 0;
+  max-width: 30px;
+}
+.Login form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 420px;
+}

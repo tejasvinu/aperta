@@ -1,0 +1,25 @@
+* {
+  margin: auto;
+}
+.maketweet {
+  padding-top: 30px;
+  min-height: 20vh;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+.postbut {
+  bottom: 35px;
+  left: 318px;
+  position: absolute;
+}
+textarea {
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  background: #fff;
+  height: auto;
+  width: 400px;
+}

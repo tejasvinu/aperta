@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import * as serviceWorker from "./serviceWorker";
+import { Navigation } from "./components/navigation";
+import Home from "./home.js";
+import Wall from "./wall.js";
+import SmoothScroll from "smooth-scroll";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+export const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000,
+  speedAsDuration: true,
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Wall" element={<Wall/>}/>
+    </Routes>
+  </Router>,
+  document.getElementById("root")
 );
 
+serviceWorker.unregister();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
