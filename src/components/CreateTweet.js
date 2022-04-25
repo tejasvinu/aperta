@@ -6,7 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Grid from '@mui/material/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const CreateTweet = ({tweets,setTweets,textInput,setTextInput}) => {
+const CreateTweet = ({tweets,setTweets,textInput,setTextInput,like,setLike}) => {
 
     //functions
     const userInputHandler = (e) => {
@@ -15,6 +15,7 @@ const CreateTweet = ({tweets,setTweets,textInput,setTextInput}) => {
 
     const submitTweetHandler = (e) => {
         e.preventDefault();
+        like = 0;
         setTweets([...tweets, { message:textInput, id: uuidv4() }]);
         setTextInput("");
     }

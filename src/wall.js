@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import TweetList from './components/TweetList'
 import CreateTweet from './components/CreateTweet'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-
+import { NavLink } from "react-router-dom";
 import EditIcon from '@mui/icons-material/Edit';
 import Fab from '@mui/material/Fab';
 import AppBar from '@mui/material/AppBar';
@@ -33,6 +33,7 @@ function Wall() {
   const [name, setName] = useState('tejas');
   const [textInput, setTextInput] = useState("");
   const [tweets, setTweets] = useState([]);
+  const [like, setLike] = useState([0]);
 
   const message = "it's a tweet";
 
@@ -109,11 +110,20 @@ function Wall() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem>
+                  <NavLink className="nav-link" to="/profile">
+                    <Typography textAlign="center">profile </Typography>
+                  </NavLink>
                 </MenuItem>
-              ))}
+                <MenuItem>
+                  <Typography textAlign="center">Account</Typography>
+                </MenuItem>
+                <MenuItem>
+                  <Typography textAlign="center">Dashboard</Typography>
+                </MenuItem>
+                <MenuItem>
+                  <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
@@ -123,8 +133,10 @@ function Wall() {
         setTextInput={setTextInput}
         tweets={tweets}
         setTweets={setTweets}
+        like={like}
+        setLike={setLike}
       />
-      <TweetList name={name} tweets={tweets} setTweets={setTweets}/>
+      <TweetList name={name} tweets={tweets} setTweets={setTweets} like={like} setLike={setLike}/>
       
     </div>
   );

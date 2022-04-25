@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { Navigation } from "./components/navigation";
+import { Profile } from "./components/Profile";
 import Home from "./home.js";
 import Wall from "./wall.js";
 import SmoothScroll from "smooth-scroll";
@@ -17,7 +18,8 @@ ReactDOM.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Wall" element={<Wall/>}/>
+      <Route path="/Wall" element={<Wall />} />
+      <Route path="/profile" element={<Profile/> }/>
     </Routes>
   </Router>,
   document.getElementById("root")

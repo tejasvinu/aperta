@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
+
+
 export const Navigation = (props) => {
+
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -37,20 +40,10 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href='#signin' className='page-scroll'>
-                Login
-              </a>
-            </li>
-            <li>
-            <NavLink className="nav-link" to="/Wall">
-                  Posts
-                  <span className="sr-only">(current)</span>
-            </NavLink>
-            </li>
-            <li>
-              <a href='#portfolio' className='page-scroll'>
-                Join us
-              </a>
+              <NavLink className="nav-link" to="/Wall">
+                Posts
+                <span className="sr-only">(current)</span>
+              </NavLink>
             </li>
             <li>
               <a href='#testimonials' className='page-scroll'>
@@ -72,4 +65,4 @@ export const Navigation = (props) => {
       </div>
     </nav>
   )
-}
+};
