@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import { Navigation } from "./components/navigation";
 import { Profile } from "./components/Profile";
 import Home from "./home.js";
 import Wall from "./wall.js";
